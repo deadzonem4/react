@@ -1,44 +1,67 @@
 
 import React from 'react';
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
-import logo from '../../logo.svg';
+import logo from '../../images/logo.svg';
 import './Menu.css';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 
 class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
   render() {
     return (
-      <nav className="navbar navbar-expand-md navbar-light bg-light">
+      <div>
+        <Navbar color="light" light expand="md">
           <div className="container">
-                <Link className="navbar-brand" to="/">
-                  <img src={logo} className="App-logo" alt="logo" />
-                </Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                      <Link className="nav-link" to="/">{this.props.home}</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/weather">{this.props.weather}</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/sport">{this.props.sport}</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/contact">{this.props.contact}</Link>
-                    </li>
-                  </ul>
-                </div>
+            <Link className="navbar-brand" to="/">
+              <img src={logo} className="App-logo" alt="logo" />
+            </Link>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <Link className="nav-link" to="/">{this.props.home}</Link>
+                </NavItem>
+                <NavItem>
+                  <Link className="nav-link" to="/weather">{this.props.weather}</Link>
+                </NavItem>
+                <NavItem>
+                  <Link className="nav-link" to="/sport">{this.props.sport}</Link>
+                </NavItem>
+                <NavItem>
+                  <Link className="nav-link" to="/contact">{this.props.contact}</Link>
+                </NavItem>
+              </Nav>
+            </Collapse>
           </div>
-      </nav>
-    );         
+        </Navbar>
+      </div>
+    );
   }
 }
-
 export default Menu;
-
 
 
 

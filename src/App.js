@@ -4,8 +4,8 @@ import Home from './pages/Home';
 import Weather from './pages/Weather';
 import Sport from './pages/Sport';
 import Contact from './pages/Contact';
-import Sidebar from './components/common/Menu';
-import logo from './logo.svg';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 
  
  class App extends Component {
@@ -13,13 +13,14 @@ import logo from './logo.svg';
      return (
       <BrowserRouter>
         <div>
-          <Sidebar home="Home" weather="Weather" sport="Sport" contact="Contact" />
+          <Header/>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/weather/" component={Weather} />
             <Route path="/sport/" component={Sport} />
             <Route path="/contact/" component={Contact} />
           </Switch>
+          <Footer/>
         </div>
       </BrowserRouter>
      );
