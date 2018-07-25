@@ -1,7 +1,22 @@
 {
-  "main.css": "static/css/main.52b7ae30.css",
-  "main.css.map": "static/css/main.52b7ae30.css.map",
-  "main.js": "static/js/main.e73c84c9.js",
-  "main.js.map": "static/js/main.e73c84c9.js.map",
-  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg"
+  "main.css": "static/css/main.8e74f135.css",
+  "main.css.map": "static/css/main.8e74f135.css.map",
+  "main.js": "static/js/main.a4d46487.js",
+  "main.js.map": "static/js/main.a4d46487.js.map",
+  "static/media/basketball.jpg": "static/media/basketball.f79634ea.jpg",
+  "static/media/bike.jpg": "static/media/bike.c8ada24d.jpg",
+  "static/media/football.jpg": "static/media/football.b1021e29.jpg",
+  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg",
+  "static/media/running.jpg": "static/media/running.439b0073.jpg",
+  "static/media/skiing.jpg": "static/media/skiing.c6cf1238.jpg",
+  "static/media/slick.eot": "static/media/slick.ced611da.eot",
+  "static/media/slick.svg": "static/media/slick.f97e3bbf.svg",
+  "static/media/slick.ttf": "static/media/slick.d41f55a7.ttf",
+  "static/media/slick.woff": "static/media/slick.b7c9e1e4.woff",
+  "static/media/surf.jpg": "static/media/surf.2571b795.jpg",
+  "static/media/weather-slide-1.jpg": "static/media/weather-slide-1.b80ae6d7.jpg",
+  "static/media/weather-slide-2.jpg": "static/media/weather-slide-2.f5632029.jpg",
+  "static/media/weather-slide-3.jpg": "static/media/weather-slide-3.b140c110.jpg",
+  "static/media/weather-slide-4.jpg": "static/media/weather-slide-4.8ec10a1b.jpg",
+  "static/media/yoga.jpg": "static/media/yoga.192c86ac.jpg"
 }
