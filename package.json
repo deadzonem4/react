@@ -1,4 +1,5 @@
-{ "homepage": "http://deadzonem4.github.io/react",
+{
+  "homepage": "http://deadzonem4.github.io/react",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
