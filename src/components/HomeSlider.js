@@ -37,7 +37,7 @@ class HomeSlider extends React.Component {
         </Slider>
         <div className="slider-overlay">
           <h2>There is no such thing as bad weather, only different kinds of good weather.</h2>
-          <p>Here you can find what will be your weather test</p>
+          <p>Here you can find what will be your weather</p>
           <a id="toSearch" href="">Search</a>
           <div className="slider-arrows">
             <img src={arrow} alt="arrow" />
