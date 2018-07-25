@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeGrid from '../components/HomeGrid';
 
-class Sport extends React.Component {
+class SportPage extends React.Component {
   render() {
     return (
     	<div className="sport-page bg-light">
@@ -11,5 +11,5 @@ class Sport extends React.Component {
   }
 }
 
-export default Sport;
+export default SportPage;
 

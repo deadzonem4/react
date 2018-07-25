@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBox from '../components/SearchBox';
 
-class Weather extends React.Component {
+class WeatherPage extends React.Component {
   render() {
     return (
     	<div className="contact-page bg-light">
@@ -11,5 +11,5 @@ class Weather extends React.Component {
   }
 }
 
-export default Weather;
+export default WeatherPage;
 
