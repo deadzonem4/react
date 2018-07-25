@@ -1,0 +1,23 @@
+.toTop{
+	position: fixed;
+	right: 40px;
+	bottom: 60px;
+	padding: 10px 15px;
+	background-color: #fded64;
+	border-radius: 6px;
+	cursor: pointer;
+	-webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    opacity: 1;
+}
+.toTop:hover{
+	background-color: #c7b933;
+}
+.toTop:hover > i{
+	color: #FFF;
+}
+.toTop i{
+	font-size: 20px;
+	color: #333;
+}

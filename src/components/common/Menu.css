@@ -29,3 +29,13 @@
 .nav-item{
 	position: relative;
 }
+.fixed-header{
+	position: fixed!important;
+	width: 100%;
+	z-index: 999;
+	min-height: 50px!important;
+	padding: 0!important;
+}
+header .navbar{
+	padding: 1rem;
+}	

@@ -18,7 +18,7 @@ class SearchBox extends React.Component {
                 <input type="submit" name="submit" value="Search" id="submit" />
             </form>
             <div id="info" className="row">
-              <div class="entered-city col-md-3">
+              <div className="entered-city col-md-3">
                   <p className="current-city">Weather in <span id="city-name"></span></p>
                   <p className="temperature"><span id="icon"></span><span id="temp"></span></p>
               </div>
