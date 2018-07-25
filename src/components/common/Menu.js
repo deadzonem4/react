@@ -35,20 +35,20 @@ class Menu extends React.Component {
       <div>
         <Navbar color="light" light expand="md">
           <div className="container">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/react">
               <img src={logo} className="App-logo" alt="logo" />
             </Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <Link className="nav-link" to="/">{this.props.home}</Link>
+                  <Link className="nav-link" to="/react">{this.props.home}</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/weather">{this.props.weather}</Link>
+                  <Link className="nav-link" to="/react/weather">{this.props.weather}</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/sport">{this.props.sport}</Link>
+                  <Link className="nav-link" to="/react/sport">{this.props.sport}</Link>
                 </NavItem>
                 <NavItem>
                   <NavLink target="_blank" href="http://rosen-georgiev.co.nf/">{this.props.contact}</NavLink>

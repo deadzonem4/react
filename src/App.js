@@ -14,9 +14,9 @@ import Footer from './components/common/Footer';
         <div>
           <Header/>
           <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/weather/" component={WeatherPage} />
-            <Route path="/sport/" component={SportPage} />
+            <Route exact path="/react" component={HomePage} />
+            <Route path="/react/weather/" component={WeatherPage} />
+            <Route path="/react/sport/" component={SportPage} />
           </Switch>
           <Footer/>
         </div>
