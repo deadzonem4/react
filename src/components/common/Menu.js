@@ -51,7 +51,7 @@ class Menu extends React.Component {
                   <Link className="nav-link" to="/sport">{this.props.sport}</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/contact">{this.props.contact}</Link>
+                  <NavLink target="_blank" href="http://rosen-georgiev.co.nf/">{this.props.contact}</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

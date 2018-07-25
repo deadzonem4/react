@@ -1,0 +1,77 @@
+.categories{
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+.categories-box{
+	overflow: hidden;
+	border-radius: 6px;
+	position: relative;
+}
+.categories img{
+	width: 100%;
+	border-radius: 6px;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition:    all 0.3s ease;
+    -o-transition:      all 0.3s ease;
+    -ms-transition:     all 0.3s ease;
+    transition:         all 0.3s ease;
+}
+.sports{
+	text-align: center;
+	padding-bottom: 80px;
+}
+.sports h2{
+	font-weight: 600;
+    font-size: 48px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 40px;
+}
+.categories-box:hover .sport-img{
+	-webkit-transform:scale(1.08); /* Safari and Chrome */
+    -moz-transform:scale(1.08); /* Firefox */
+    -ms-transform:scale(1.08); /* IE 9 */
+    -o-transform:scale(1.08); /* Opera */
+     transform:scale(1.08);
+}
+.categories-box:hover .category-overlay{
+	opacity: 1;
+}
+.category-overlay{
+	background: rgba(0,0,0,0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.content-details{
+	position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #FFF;
+}
+.fadeIn-top {
+    top: 20%;
+}
+.categories-box:hover .content-details{
+	opacity: 1;
+	top: 50%;
+}

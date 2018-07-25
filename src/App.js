@@ -3,7 +3,6 @@ import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Weather from './pages/Weather';
 import Sport from './pages/Sport';
-import Contact from './pages/Contact';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 
@@ -18,7 +17,6 @@ import Footer from './components/common/Footer';
             <Route exact path="/" component={Home} />
             <Route path="/weather/" component={Weather} />
             <Route path="/sport/" component={Sport} />
-            <Route path="/contact/" component={Contact} />
           </Switch>
           <Footer/>
         </div>

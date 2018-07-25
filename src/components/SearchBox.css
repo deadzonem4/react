@@ -1,0 +1,128 @@
+.search{
+	text-align: center;
+	padding-bottom: 80px;
+}
+.search h2{
+	font-weight: 600;
+    font-size: 48px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 40px;
+}
+#search-box label{
+	margin: 0 10px 0 0;
+	position: relative;
+}
+input[type="text"]{
+	font-size: 18px;
+	color: #333;
+	-webkit-appearance: none;
+	border: solid 1px #fded64;
+	padding: 5px 10px 5px 35px;
+	width: 100%;
+	border-radius: 4px;
+}
+input[type="text"]:focus{
+	outline: none;
+	border: solid 1px #c7b933;
+	box-shadow: 0 0 3px #c7b933;
+	-webkit-box-shadow: 0 0 3px #c7b933;
+}
+input[type="submit"]{
+	font-size: 18px;
+	color: #333;
+	background-color: #fded64;
+	border: none;
+	border-radius: 6px;
+	padding: 7px 20px;
+	font-weight: 600;
+	transition: .2s ease-in-out;
+}
+input[type="submit"]:hover, input[type="submit"]:focus{
+	text-decoration: none;
+	background-color: #c7b933;
+	color: #FFF;
+	outline: none;
+}
+input[type="submit"]:disabled{
+	opacity: .6;
+	cursor: not-allowed;
+}
+#search-box i{
+	position: absolute;
+	top: 12px;
+	left: 8px;
+    color: rgba(51, 51, 51, 0.69);
+}
+#message{
+	color: red;
+	font-size: 12px;
+	position: absolute;
+
+}
+#info{
+	display: none;
+    padding: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.entered-city{
+	text-align: left;
+}
+.current-city{
+	font-size: 22px;
+	color: #333;
+	font-weight: 900;
+	margin-bottom: 0;
+}
+.temperature{
+	font-size: 26px;
+	color: #333;
+	font-weight: 900;
+}
+.aditional-info{
+	border: solid 1px #333;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	width: 100%;
+	box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2);
+}
+.aditional-info thead{
+	background-color: #fded64;
+}
+.aditional-info th{
+	font-size: 16px;
+	font-weight: 900;
+	color: #333;
+	border: solid 1px #333;
+	padding: 5px;
+}
+.aditional-info td{
+	font-size: 15px;
+	color: #333;
+	border: solid 1px #333;
+	padding: 5px;
+	font-weight: 600;
+}
+#more{
+	font-size: 18px;
+    color: #333;
+    border-radius: 8px;
+    padding: 8px 30px;
+    background-color: #fded64;
+    box-shadow: 1px 2px 4px rgba(51, 51, 51, 0.3);
+    transition: .3s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+}
+#more:hover{
+	text-decoration: none;
+	box-shadow: 3px 4px 4px rgba(51, 51, 51, 0.3);
+}
+.day-list{
+	list-style: none;
+    text-align: center;
+}
+.day-list li{
+ padding: 5px;
+}

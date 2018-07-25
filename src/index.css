@@ -9,3 +9,10 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.contact-page{
+	padding-top: 15vh;
+	height: 87vh;
+}
+.sport-page{
+	padding-top: 60px;
+}

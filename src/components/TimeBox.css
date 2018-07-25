@@ -1,0 +1,20 @@
+.time-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.time-box h2{
+	font-weight: 600;
+    font-size: 48px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 40px;
+}
+.time-box p{
+	font-size: 20px;
+	color: #333;
+}
