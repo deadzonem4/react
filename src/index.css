@@ -11,7 +11,7 @@ body{
 }
 .contact-page{
 	padding-top: 15vh;
-	height: 87vh;
+	min-height: 85vh;
 }
 .sport-page{
 	padding-top: 60px;

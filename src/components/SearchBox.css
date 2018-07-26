@@ -59,13 +59,15 @@ input[type="submit"]:disabled{
 	color: red;
 	font-size: 12px;
 	position: absolute;
-
 }
 #info{
 	display: none;
     padding: 0;
     margin-top: 60px;
     margin-bottom: 60px;
+}
+.show-result{
+	display: flex!important;
 }
 .entered-city{
 	text-align: left;

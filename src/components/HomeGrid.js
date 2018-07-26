@@ -21,7 +21,7 @@ class HomeGrid extends React.Component {
 					<SportBox name="col-md-4 categories" source={surf} category="Surfing" />
 					<SportBox name="col-md-4 categories" source={yoga} category="Yoga" />
 					<SportBox name="col-md-8 categories" source={running} category="Running" />
-					<SportBox name="col-md-8 categories" source={football} category="Footbal" />
+					<SportBox name="col-md-8 categories" source={football} category="Football" />
 					<SportBox name="col-md-4 categories" source={skiing} category="Skiing"/>
 				</div>
 			</div>

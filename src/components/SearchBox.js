@@ -1,13 +1,23 @@
 import React from "react";
 import './SearchBox.css';
-
+import SearchResults from './SearchResults';
 
 class SearchBox extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {value : '', name : []};
-
+    this.state = {
+      value : '',
+      name : '',
+      country : '',
+      temp : '',
+      haveError : false,
+      show : 'row',
+      description : '',
+      humidity : '',
+      wind : '',
+      pressure : ''
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,7 +29,6 @@ class SearchBox extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state.value);
     event.preventDefault();
     this.ApiInfo();
   }
@@ -31,14 +40,28 @@ class SearchBox extends React.Component {
     city = this.state.value;
     var url = "";
     url = api + city + apikey + metric;
-    console.log(url)
 
     fetch(url)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) { throw response }
+        return response.json()
+      })
       .then(data => {
-        console.log(data.name);
-        this.setState({ name: data.name });
-        console.log(this.state.name)
+        this.setState({ name : data.name });
+        this.setState({ country : data.sys.country });
+        this.setState({ temp : Math.round(data.main.temp) + '°C'});
+        this.setState({ haveError : false });
+        this.setState({ show : 'show-result row' });
+        this.setState({ description : data.weather[0].description });
+        this.setState({ humidity : data.main.humidity + '%'});
+        this.setState({ wind : data.wind.speed + 'm/s'});
+        this.setState({ pressure : data.main.pressure + 'hpa'});
+
+      })
+      .catch(error => {
+        this.setState({ haveError : true });
+        this.setState({ show : 'row' });
+
       });
   }
 
@@ -51,44 +74,14 @@ class SearchBox extends React.Component {
                 <label>
                     <input type="text" name="city" id="city" value={this.state.value} onChange={this.handleChange} />
                     <i className="fas fa-plane"></i>
-                    <p id="message">{this.state.forecast}</p>
+                    <p id="message">{this.state.haveError ? 'There are some errors' : ''}</p>
                 </label>
                 <input type="submit" name="submit" value="Search" id="submit" onClick={this.handleSubmit} />
             </form>
-            <div id="info" className="row">
-              <div className="entered-city col-md-3">
-                  <p className="current-city">Weather in <span id="city-name"></span></p>
-                  <p className="temperature"><span id="icon"></span><span id="temp"></span></p>
-              </div>
-              <div className="col-md-9">
-                  <table className="aditional-info">
-                      <thead>
-                          <tr>
-                            <th>Cloudiness</th>
-                            <th>Max-temperature</th>
-                            <th>Min-temperature</th>
-                            <th>Humidity</th>
-                            <th>Wind</th>
-                            <th>Pleasure</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                            <td id="cloud"></td>
-                            <td id="max-temp"></td>
-                            <td id="min-temp"></td>
-                            <td id="humidity"></td>
-                            <td id="wind"></td>
-                            <td id="pressure"></td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-              <div className="show-more col-12 text-center">
-                  <input type="submit" name="submit" value="Show five days forecast" id="more" />
-              </div>
-            </div>
-            <div id="forecast-box" className="row"></div>
+            <SearchResults name={this.state.name} country={this.state.country} temp={this.state.temp} 
+            class={this.state.show} description={this.state.description} humidity={this.state.humidity} 
+            wind={this.state.wind} pressure={this.state.pressure}
+            />
           </div>
         </div>
 	    );

@@ -10,7 +10,7 @@ class HomePage extends React.Component {
   render() {
     return (
     	<div>
-	    	<HomeSlider />
+	    	<HomeSlider search="Search"/>
 	    	<TimeBox />
 	    	<HomeGrid />
 	    	<SearchBox />
