@@ -24,16 +24,16 @@ class HomeSlider extends React.Component {
       <div className="main-slider">
         <Slider {...settings} className="full-width-slider">
           <div className="slide">
-              <img src={slide4} alt="rainy"/>
+            <img src={slide4} alt={slide4}/>
           </div>
           <div className="slide">
-              <img src={slide1} alt="umbrella"/>
+            <img src={slide1} alt={slide1}/>
           </div>
           <div className="slide">
-              <img src={slide2} alt="sunny"/>
+            <img src={slide2} alt={slide2}/>
           </div>
           <div className="slide">
-              <img src={slide3} alt="sky"/>
+            <img src={slide3} alt={slide3}/>
           </div>
         </Slider>
         <div className="slider-overlay">

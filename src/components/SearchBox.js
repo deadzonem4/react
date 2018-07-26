@@ -33,7 +33,7 @@ class SearchBox extends React.Component {
     this.ApiInfo();
   }
   ApiInfo() {    
-    var api = 'http://api.openweathermap.org/data/2.5/weather?q=',
+    var api = 'https://api.openweathermap.org/data/2.5/weather?q=',
     city,
     apikey = '&APPID=673dc5799ec44bdbd03917d17cdaba93',
     metric = '&units=metric';

@@ -27,7 +27,7 @@ class Menu extends React.Component {
     document.addEventListener('scroll', () => {
       const isTop = window.scrollY < 1;
       if (isTop !== this.state.isTop) {
-          this.setState({ isTop })
+        this.setState({ isTop })
       }
     });
   }
