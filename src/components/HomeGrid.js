@@ -16,13 +16,13 @@ class HomeGrid extends React.Component {
     	<div className="sports bg-light"> 
 	      	<div className="container">
 				<div className="row">
-					<SportBox name="col-md-4 categories" source={basketball}/>
-					<SportBox name="col-md-4 categories" source={bike}/>
-					<SportBox name="col-md-4 categories" source={surf}/>
-					<SportBox name="col-md-4 categories" source={yoga}/>
-					<SportBox name="col-md-8 categories" source={running}/>
-					<SportBox name="col-md-8 categories" source={football}/>
-					<SportBox name="col-md-4 categories" source={skiing}/>
+					<SportBox name="col-md-4 categories" source={basketball} category="Basketball" />
+					<SportBox name="col-md-4 categories" source={bike} category="Bike Riding" />
+					<SportBox name="col-md-4 categories" source={surf} category="Surfing" />
+					<SportBox name="col-md-4 categories" source={yoga} category="Yoga" />
+					<SportBox name="col-md-8 categories" source={running} category="Running" />
+					<SportBox name="col-md-8 categories" source={football} category="Footbal" />
+					<SportBox name="col-md-4 categories" source={skiing} category="Skiing"/>
 				</div>
 			</div>
 		</div>

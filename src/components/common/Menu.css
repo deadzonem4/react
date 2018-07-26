@@ -3,7 +3,8 @@
 	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .navbar-brand{
-	width: 80px;
+	width: 100px;
+	transition: linear 0.2s all;
 }
 .nav-link{
 	padding: 6px 20px 4px 20px!important;
@@ -34,8 +35,7 @@
 	width: 100%;
 	z-index: 999;
 	min-height: 50px!important;
-	padding: 0!important;
 }
-header .navbar{
-	padding: 1rem;
-}	
+.fixed-header .navbar-brand{
+	width: 62px!important;
+}

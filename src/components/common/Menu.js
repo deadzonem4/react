@@ -1,28 +1,23 @@
 
 import React from 'react';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import './Menu.css';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink
+  } from 'reactstrap';
 
 class Menu extends React.Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
-    this.state = {isOpen: false};
-    this.state = {isTop: true};
+    this.state = {isOpen: false, isTop: true};
   }
   toggle() {
     this.setState({
@@ -38,7 +33,7 @@ class Menu extends React.Component {
     });
   }
   render() {
-    const scrollBg = this.scrollBackground ? 'nav-bg scrolling' : 'nav-bg';
+    // const scrollBg = this.scrollBackground ? 'nav-bg scrolling' : 'nav-bg';
     return (
       <div>
         <Navbar color="light" light expand="md" className={this.state.isTop ? '' : 'fixed-header'}>

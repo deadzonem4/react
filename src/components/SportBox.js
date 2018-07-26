@@ -9,12 +9,12 @@ class SportBox extends React.Component {
     return (
       <div className={this.props.name}>
         <div className="categories-box">
-            <a href="#">
+            <a href="/react">
                 <img className="sport-img" src={this.props.source}  alt="sport"/>
             </a>
             <div className="category-overlay"></div>
             <div className="content-details fadeIn-top">
-                  <h4>Basketball</h4>
+                  <h4>{this.props.category}</h4>
               </div>
         </div>
       </div>
