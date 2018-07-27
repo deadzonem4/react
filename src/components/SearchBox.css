@@ -60,6 +60,9 @@ input[type="submit"]:disabled{
 	font-size: 12px;
 	position: absolute;
 }
+#icon{
+	max-width: 40px;
+}
 #info{
 	display: none;
     padding: 0;
@@ -127,4 +130,19 @@ input[type="submit"]:disabled{
 }
 .day-list li{
  padding: 5px;
+}
+@media only screen and (max-width: 991px) {
+    .search h2{
+    	font-size: 32px;
+    }
+}
+@media only screen and (max-width: 544px) {
+    .search h2{
+    	line-height: 1.2;
+    }
+}
+@media only screen and (max-width: 376px) {
+    input[type="submit"]{
+    	margin-top: 15px;
+    }
 }

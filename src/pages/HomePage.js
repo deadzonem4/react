@@ -1,7 +1,7 @@
 import React from 'react';
-import HomeSlider from '../components/HomeSlider';
+import MainSlider from '../components/MainSlider';
 import TimeBox from '../components/TimeBox';
-import HomeGrid from '../components/HomeGrid';
+import SportGrid from '../components/SportGrid';
 import SearchBox from '../components/SearchBox';
 import ScrollButton from '../components/ScrollButton';
 
@@ -10,10 +10,10 @@ class HomePage extends React.Component {
   render() {
     return (
     	<div>
-	    	<HomeSlider search="Search"/>
+	    	<MainSlider search="Search"/>
 	    	<TimeBox />
-	    	<HomeGrid />
-	    	<SearchBox />
+        <SearchBox />
+	    	<SportGrid />
         <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
     	</div>
     	);

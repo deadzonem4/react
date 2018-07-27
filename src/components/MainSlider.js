@@ -6,9 +6,9 @@ import slide2 from '../images/slider/weather-slide-2.jpg';
 import slide3 from '../images/slider/weather-slide-3.jpg';
 import slide4 from '../images/slider/weather-slide-4.jpg';
 import arrow from '../images/two-arrow.png';
-import './HomeSlider.css';
+import './MainSlider.css';
 
-class HomeSlider extends React.Component {
+class MainSlider extends React.Component {
   render() {
     var settings = {
       slidesToShow: 1,
@@ -49,5 +49,5 @@ class HomeSlider extends React.Component {
   }
 }
 
-export default HomeSlider;
+export default MainSlider;
 

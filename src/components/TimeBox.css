@@ -18,3 +18,21 @@
 	font-size: 20px;
 	color: #333;
 }
+@media only screen and (max-width: 991px) {
+    .time-box h2{
+    	font-size: 32px;
+    }
+    .time-box p{
+		font-size: 17px;
+		color: #333;
+	}
+}
+@media only screen and (max-width: 544px) {
+    .time-box{
+    	padding-top: 50px;
+    	padding-bottom: 50px;
+    }
+    .time-box h2{
+    	line-height: 1.2;
+    }
+}

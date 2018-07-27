@@ -16,7 +16,8 @@ class SearchBox extends React.Component {
       description : '',
       humidity : '',
       wind : '',
-      pressure : ''
+      pressure : '',
+      icon : '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -56,6 +57,7 @@ class SearchBox extends React.Component {
         this.setState({ humidity : data.main.humidity + '%'});
         this.setState({ wind : data.wind.speed + 'm/s'});
         this.setState({ pressure : data.main.pressure + 'hpa'});
+        this.setState({ icon : "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"});
 
       })
       .catch(error => {
@@ -72,15 +74,15 @@ class SearchBox extends React.Component {
             <h2>Find out what's the weather in your town</h2>
             <form id="search-box">
                 <label>
-                    <input type="text" name="city" id="city" value={this.state.value} onChange={this.handleChange} />
-                    <i className="fas fa-plane"></i>
-                    <p id="message">{this.state.haveError ? 'There are some errors' : ''}</p>
+                  <input type="text" name="city" id="city" value={this.state.value} onChange={this.handleChange} />
+                  <i className="fas fa-plane"></i>
+                  <p id="message">{this.state.haveError ? 'Please enter a valid city' : ''}</p>
                 </label>
                 <input type="submit" name="submit" value="Search" id="submit" onClick={this.handleSubmit} />
             </form>
             <SearchResults name={this.state.name} country={this.state.country} temp={this.state.temp} 
             class={this.state.show} description={this.state.description} humidity={this.state.humidity} 
-            wind={this.state.wind} pressure={this.state.pressure}
+            wind={this.state.wind} pressure={this.state.pressure} icon={this.state.icon}
             />
           </div>
         </div>
