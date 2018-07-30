@@ -3,7 +3,7 @@ import MainSlider from '../components/MainSlider';
 import TimeBox from '../components/TimeBox';
 import SportGrid from '../components/SportGrid';
 import SearchBox from '../components/SearchBox';
-import ScrollButton from '../components/ScrollButton';
+import ToTopButton from '../components/ToTopButton';
 
 
 class HomePage extends React.Component {
@@ -14,7 +14,7 @@ class HomePage extends React.Component {
 	    	<TimeBox />
         <SearchBox />
 	    	<SportGrid />
-        <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
+        <ToTopButton scrollStepInPx="50" delayInMs="16.66"/>
     	</div>
     	);
   }

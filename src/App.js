@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import NoMatch from './pages/NoMatch';
 import WeatherPage from './pages/WeatherPage';
 import SportPage from './pages/SportPage';
 import Header from './components/common/Header';
@@ -18,6 +19,7 @@ import Cookie from './components/common/Cookie';
             <Route exact path="/react" component={HomePage} />
             <Route path="/react/weather/" component={WeatherPage} />
             <Route path="/react/sport/" component={SportPage} />
+            <Route  component={NoMatch} />
           </Switch>
           <Footer/>
           <Cookie />

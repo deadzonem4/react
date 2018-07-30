@@ -17,7 +17,7 @@ class SearchBox extends React.Component {
       humidity : '',
       wind : '',
       pressure : '',
-      icon : '',
+      icon : ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -48,22 +48,24 @@ class SearchBox extends React.Component {
         return response.json()
       })
       .then(data => {
-        this.setState({ name : data.name });
-        this.setState({ country : data.sys.country });
-        this.setState({ temp : Math.round(data.main.temp) + '°C'});
-        this.setState({ haveError : false });
-        this.setState({ show : 'show-result row' });
-        this.setState({ description : data.weather[0].description });
-        this.setState({ humidity : data.main.humidity + '%'});
-        this.setState({ wind : data.wind.speed + 'm/s'});
-        this.setState({ pressure : data.main.pressure + 'hpa'});
-        this.setState({ icon : "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"});
-
+        this.setState({ 
+          haveError : false,
+          name : data.name,
+          country : data.sys.country,
+          temp : Math.round(data.main.temp) + '°C',
+          show : 'show-result row',
+          description : data.weather[0].description,
+          humidity : data.main.humidity + '%',
+          wind : data.wind.speed + 'm/s',
+          pressure : data.main.pressure + 'hpa',
+          icon : "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+        });
       })
       .catch(error => {
-        this.setState({ haveError : true });
-        this.setState({ show : 'row' });
-
+        this.setState({ 
+          haveError : true,
+          show : 'row'
+        });
       });
   }
 
@@ -74,7 +76,7 @@ class SearchBox extends React.Component {
             <h2>Find out what's the weather in your town</h2>
             <form id="search-box">
                 <label>
-                  <input type="text" name="city" id="city" value={this.state.value} onChange={this.handleChange} />
+                  <input type="text" name="city" id="city" value={this.state.value} onChange={this.handleChange} placeholder="Type city name" />
                   <i className="fas fa-plane"></i>
                   <p id="message">{this.state.haveError ? 'Please enter a valid city' : ''}</p>
                 </label>

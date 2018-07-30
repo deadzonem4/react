@@ -1,9 +1,9 @@
 import React from "react";
-import './ScrollButton.css';
+import './ToTopButton.css';
 
 
 
-class ScrollButton extends React.Component {
+class ToTopButton extends React.Component {
   constructor() {
     super();
 
@@ -34,4 +34,4 @@ class ScrollButton extends React.Component {
 } 
 
 
-export default ScrollButton;
+export default ToTopButton;
