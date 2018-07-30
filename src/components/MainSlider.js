@@ -39,7 +39,7 @@ class MainSlider extends React.Component {
         <div className="slider-overlay">
           <h2>There is no such thing as bad weather, only different kinds of good weather.</h2>
           <p>Here you can find what will be your weather</p>
-          <Link id="toSearch" to="react/weather">{this.props.search}</Link>
+          <Link id="toSearch" to="/weather">{this.props.search}</Link>
           <div className="slider-arrows">
             <img src={arrow} alt="arrow" />
           </div>
