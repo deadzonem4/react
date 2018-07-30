@@ -5,6 +5,7 @@ import WeatherPage from './pages/WeatherPage';
 import SportPage from './pages/SportPage';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import Cookie from './components/common/Cookie';
 
  
  class App extends Component {
@@ -19,6 +20,7 @@ import Footer from './components/common/Footer';
             <Route path="/react/sport/" component={SportPage} />
           </Switch>
           <Footer/>
+          <Cookie />
         </div>
       </BrowserRouter>
      );

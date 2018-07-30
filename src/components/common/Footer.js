@@ -11,7 +11,7 @@ class Footer extends React.Component {
                 <p className="all-rights">© 2018 Rosen Georgiev. All rights reserved.</p>
             </div>
       	</footer>
-    	);         
+    );         
   }
 }
 
