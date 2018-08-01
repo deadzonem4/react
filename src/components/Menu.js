@@ -47,7 +47,7 @@ class Menu extends React.Component {
                   <Link className="nav-link" to="/react">{this.props.home}</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/react/Search">{this.props.search}</Link>
+                  <Link className="nav-link" to="/react/search">{this.props.search}</Link>
                 </NavItem>
                 <NavItem>
                   <Link className="nav-link" to="/react/sport">{this.props.sport}</Link>
