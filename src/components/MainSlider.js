@@ -6,7 +6,7 @@ import slide2 from '../images/slider/weather-slide-2.jpg';
 import slide3 from '../images/slider/weather-slide-3.jpg';
 import slide4 from '../images/slider/weather-slide-4.jpg';
 import arrow from '../images/two-arrow.png';
-import './MainSlider.css';
+import '../common/styles/MainSlider.css';
 
 class MainSlider extends React.Component {
   render() {
@@ -39,7 +39,7 @@ class MainSlider extends React.Component {
         <div className="slider-overlay">
           <h2>There is no such thing as bad weather, only different kinds of good weather.</h2>
           <p>Here you can find what will be your weather</p>
-          <Link id="toSearch" to="/weather">{this.props.search}</Link>
+          <Link id="toSearch" to="/weather">{this.props.button}</Link>
           <div className="slider-arrows">
             <img src={arrow} alt="arrow" />
           </div>

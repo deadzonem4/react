@@ -48,9 +48,9 @@ class WhichBrowser extends React.Component {
 
   render() {
 		return (
-        <p>You are visiting this site via <span id="browser">{this.state.browser}</span></p>
-	    );
-    };
+      <p>You are visiting this site via <span id="browser">{this.state.browser}</span></p>
+	  );
+  };
     
 }
 

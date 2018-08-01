@@ -1,6 +1,6 @@
 import React from 'react';
 import SportGrid from '../components/SportGrid';
-import ToTopButton from '../components/ToTopButton';
+import ToTopButton from '../common/components/ToTopButton';
 
 class SportPage extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class SportPage extends React.Component {
 	    	<SportGrid />
 	    	<ToTopButton scrollStepInPx="50" delayInMs="16.66"/>
     	</div>
-    	);
+    );
   }
 }
 

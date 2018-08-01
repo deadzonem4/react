@@ -2,21 +2,21 @@ import React from 'react';
 import MainSlider from '../components/MainSlider';
 import TimeBox from '../components/TimeBox';
 import SportGrid from '../components/SportGrid';
-import SearchBox from '../components/SearchBox';
-import ToTopButton from '../components/ToTopButton';
+import SearchForm from '../common/components/SearchForm';
+import ToTopButton from '../common/components/ToTopButton';
 
 
 class HomePage extends React.Component {
   render() {
     return (
     	<div>
-	    	<MainSlider search="Search"/>
+	    	<MainSlider button="Search"/>
 	    	<TimeBox />
-        <SearchBox />
+        <SearchForm />
 	    	<SportGrid />
         <ToTopButton scrollStepInPx="50" delayInMs="16.66"/>
     	</div>
-    	);
+    );
   }
 }
 

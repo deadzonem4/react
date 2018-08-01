@@ -1,5 +1,5 @@
 import React from "react";
-import './TimeBox.css';
+import '../common/styles/TimeBox.css';
 import WhichBrowser from './WhichBrowser';
 
 class TimeBox extends React.Component {
@@ -27,17 +27,17 @@ class TimeBox extends React.Component {
 
   render() {
 		return (
-	      <div className="time bg-light">
-	     	  <div className="container">
-            <div className="time-box">
-              <h2>Hello</h2>
-              <p>Today is <span id="current-time">{this.state.time}</span></p>
-              <WhichBrowser />
-            </div>
+      <div className="time bg-light">
+     	  <div className="container">
+          <div className="time-box">
+            <h2>Hello</h2>
+            <p>Today is <span id="current-time">{this.state.time}</span></p>
+            <WhichBrowser />
           </div>
-	      </div>
-	    );
-    };
+        </div>
+      </div>
+	   );
+  };
     
 }
 
