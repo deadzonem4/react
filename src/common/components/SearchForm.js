@@ -1,18 +1,20 @@
 import React from "react";
 import '../styles/SearchForm.css';
 import SearchResults from './SearchResults';
+import ForecastButton from './ForecastButton';
+
 
 class SearchForm extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      value : '',
+      enteredCity : '',
       name : '',
       country : '',
       temp : '',
       haveError : false,
-      show : 'row',
+      show : true,
       description : '',
       humidity : '',
       wind : '',
@@ -26,7 +28,7 @@ class SearchForm extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({enteredCity: event.target.value});
   }
 
   handleSubmit(event) {
@@ -38,10 +40,9 @@ class SearchForm extends React.Component {
     city,
     apikey = '&APPID=673dc5799ec44bdbd03917d17cdaba93',
     metric = '&units=metric';
-    city = this.state.value;
+    city = this.state.enteredCity;
     var url = "";
     url = api + city + apikey + metric;
-
     fetch(url)
       .then(response => {
         if (!response.ok) { throw response }
@@ -53,18 +54,18 @@ class SearchForm extends React.Component {
           name : data.name,
           country : data.sys.country,
           temp : Math.round(data.main.temp) + '°C',
-          show : 'show-result row',
+          show : false,
           description : data.weather[0].description,
           humidity : data.main.humidity + '%',
           wind : data.wind.speed + 'm/s',
           pressure : data.main.pressure + 'hpa',
-          icon : "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+          icon : "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
         });
       })
       .catch(error => {
         this.setState({ 
           haveError : true,
-          show : 'row'
+          show : true
         });
       });
   }
@@ -76,16 +77,17 @@ class SearchForm extends React.Component {
           <h2>Find out what's the weather in your town</h2>
           <form id="search-box">
             <label>
-              <input type="text" name="city" id="city" value={this.state.value} onChange={this.handleChange} placeholder="Type city name" />
+              <input type="text" name="city" id="city" value={this.state.enteredCity} onChange={this.handleChange} placeholder="Type city name" />
               <i className="fas fa-plane"></i>
               <p id="message">{this.state.haveError ? 'Please enter a valid city' : ''}</p>
             </label>
             <input type="submit" name="submit" value="Search" id="submit" onClick={this.handleSubmit} />
           </form>
-          <SearchResults name={this.state.name} country={this.state.country} temp={this.state.temp} 
-          class={this.state.show} description={this.state.description} humidity={this.state.humidity} 
-          wind={this.state.wind} pressure={this.state.pressure} icon={this.state.icon}
+          <SearchResults show={this.state.show} name={this.state.name} country={this.state.country} temp={this.state.temp} 
+           description={this.state.description} humidity={this.state.humidity} 
+           wind={this.state.wind} pressure={this.state.pressure} icon={this.state.icon}
           />
+          <ForecastButton city={this.state.enteredCity} show={this.state.show}/>
         </div>
       </div>
 	  );

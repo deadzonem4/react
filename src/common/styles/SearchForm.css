@@ -4,11 +4,11 @@
 }
 .search h2{
 	font-weight: 600;
-    font-size: 48px;
-    color: #333;
-    line-height: 1.6;
-    font-family: 'Indie Flower', cursive;
-    margin-bottom: 40px;
+  font-size: 48px;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 40px;
 }
 #search-box label{
 	margin: 0 10px 0 0;
@@ -53,7 +53,7 @@ input[type="submit"]:disabled{
 	position: absolute;
 	top: 12px;
 	left: 8px;
-    color: rgba(51, 51, 51, 0.69);
+  color: rgba(51, 51, 51, 0.69);
 }
 #message{
 	color: red;
@@ -64,13 +64,10 @@ input[type="submit"]:disabled{
 	max-width: 40px;
 }
 #info{
-	display: none;
-    padding: 0;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-.show-result{
-	display: flex!important;
+	display: flex;
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 .entered-city{
 	text-align: left;
@@ -112,13 +109,16 @@ input[type="submit"]:disabled{
 }
 #more{
 	font-size: 18px;
-    color: #333;
-    border-radius: 8px;
-    padding: 8px 30px;
-    background-color: #fded64;
-    box-shadow: 1px 2px 4px rgba(51, 51, 51, 0.3);
-    transition: .3s ease-in-out;
-    -webkit-transition: .2s ease-in-out;
+  color: #333;
+  border-radius: 8px;
+  padding: 8px 30px;
+  background-color: #fded64;
+  box-shadow: 1px 2px 4px rgba(51, 51, 51, 0.3);
+  transition: .3s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+}
+.show-more{
+	margin-top: 20px;
 }
 #more:hover{
 	text-decoration: none;
@@ -126,29 +126,33 @@ input[type="submit"]:disabled{
 }
 .day-list{
 	list-style: none;
-    text-align: center;
+  text-align: center;
 }
 .day-list li{
- padding: 5px;
+ 	padding: 5px;
+}
+#forecast-box{
+	margin-top: 60px;
+  margin-bottom: 15px;
 }
 @media only screen and (max-width: 991px) {
-    .search h2{
-    	font-size: 32px;
-    }
+  .search h2{
+  	font-size: 32px;
+  }
 }
 @media only screen and (max-width: 544px) {
-    .search h2{
-    	line-height: 1.2;
-    }
-    .aditional-info th{
-    	font-size: 10px;
-	    font-weight: 900;
-	    color: #333;
-	    border: solid 1px #333;
-	    padding: 15px 3px;
-	    line-height: 1;
-    }
-    .aditional-info td{
+  .search h2{
+  	line-height: 1.2;
+  }
+  .aditional-info th{
+  	font-size: 10px;
+    font-weight: 900;
+    color: #333;
+    border: solid 1px #333;
+    padding: 15px 3px;
+    line-height: 1;
+  }
+  .aditional-info td{
 		font-size: 10px;
 	}
 	.search{
